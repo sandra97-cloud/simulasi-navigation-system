@@ -1,4 +1,7 @@
+
 from array_stack import ArrayStack
+
+
 class Memento:
     """Menyimpan kondisi halaman browser."""
 
@@ -30,14 +33,3 @@ class BackMemento:
 
     def is_empty(self):
         return self.history.is_empty()
-
-if __name__ == "__main__":
-    back = BackMemento()
-
-    back.save_state("Halaman 1")
-    back.save_state("Halaman 2")
-    back.save_state("Halaman 3")
-
-    print("Halaman sebelumnya:", back.back())
-    print("Halaman sebelumnya:", back.back())
-    print("Jumlah riwayat tersisa:", back.history.size())
