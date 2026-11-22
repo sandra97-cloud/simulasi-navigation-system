@@ -22,4 +22,4 @@ print("\n4. Pengujian Size")
 print("Jumlah data:", forward.history.size())
 
 print("\n5. Pengujian Forward Saat Kosong")
-print("Hasil:", forward.forward()
+print("Hasil:", forward.forward())
