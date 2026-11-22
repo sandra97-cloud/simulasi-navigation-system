@@ -22,7 +22,9 @@ browser.back()
 browser.back()
 browser.back()
 
-print("\n5. Pengujian Forward Saat Kosong")
+print("\n5. Pengujian Forward Sampai Kosong")
+browser.forward()
+browser.forward()
 browser.forward()
 
 print("\n=== PENGUJIAN SELESAI ===")
