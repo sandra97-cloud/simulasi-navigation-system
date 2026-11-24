@@ -5,29 +5,39 @@ class ArrayStack:
         self.data = []
 
     def push(self, item):
-        """Menambahkan halaman ke Stack."""
+        """Menambahkan data di bagian belakang."""
         self.data.append(item)
 
     def pop(self):
-        """Menghapus dan mengambil halaman paling atas."""
+        """Menghapus data paling belakang."""
         if self.is_empty():
             return None
         return self.data.pop()
 
+    def insert_at(self, index, item):
+        """Menambahkan data pada posisi tertentu."""
+        if index < 0 or index > self.size():
+            return False
+        self.data.insert(index, item)
+        return True
+
+    def remove_at(self, index):
+        """Menghapus data pada posisi tertentu."""
+        if index < 0 or index >= self.size():
+            return None
+        return self.data.pop(index)
+
     def peek(self):
-        """Melihat halaman paling atas."""
+        """Melihat data paling atas."""
         if self.is_empty():
             return None
         return self.data[-1]
 
     def is_empty(self):
-        """Memeriksa apakah Stack kosong."""
         return len(self.data) == 0
 
     def size(self):
-        """Menghitung jumlah halaman."""
         return len(self.data)
 
     def display(self):
-        """Menampilkan isi Stack."""
         return self.data.copy()
